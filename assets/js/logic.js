@@ -73,7 +73,7 @@ function result() {
   endScreen.classList.remove("hide");
   finalScore.innerHTML += score;
   clearInterval(timedInterval);
-  timer.innerText = 90;
+  timer.innerText = 120;
 }
 submitBtn.addEventListener("click", () => {
   localStorage.getItem("user");
@@ -95,7 +95,7 @@ function startTimer() {
     if (time <= 0) {
       clearInterval(timedInterval);
       result();
-      timer.innerText = 90;
+      timer.innerText = 120;
     }
   }, 1000);
 }
