@@ -1,4 +1,4 @@
-#Javascript Quiz
+# Javascript Quiz
 
 Javascript quiz built with JavaScript, Html and CSS. 
 
