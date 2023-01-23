@@ -30,6 +30,7 @@ button:hover {
   background-color: #8570a5;
 }
 .choices {
+  background-color: white !important;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr ;

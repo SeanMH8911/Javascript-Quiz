@@ -37,7 +37,7 @@ function renderQuestion() {
   questionChoices.innerHTML = question.possibleAnswers
     .map(
       (choice) =>
-        `<button value="${choice}" class="">${choice}</button>
+        `<button value="${choice}" >${choice}</button>
         `
     )
     .join("");
