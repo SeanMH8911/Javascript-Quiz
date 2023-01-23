@@ -37,12 +37,14 @@ function renderQuestion() {
   questionChoices.innerHTML = question.possibleAnswers
     .map(
       (choice) =>
-        `<button value="${choice}" class="choices">${choice}</button>
+        `<button value="${choice}" class="">${choice}</button>
         `
     )
     .join("");
+  questionChoices.addEventListener("click", selectedOptions);
 }
-questionChoices.addEventListener("click", () => {
+
+function selectedOptions() {
   button = event.target;
   selected = event.target.value;
   let answer = questions[questionIndex].correctAnswer;
@@ -56,8 +58,8 @@ questionChoices.addEventListener("click", () => {
     time -= 10;
   }
   checkAnswer(button);
-});
-
+  questionChoices.removeEventListener("click", selectedOptions);
+}
 function checkAnswer() {
   setTimeout(() => {
     renderQuestion();
